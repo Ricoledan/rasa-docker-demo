@@ -1,6 +1,6 @@
 # rasa-docker-demo
 
-Rasa NLU example
+Rasa NLU
 
 ## :speech_balloon: Introduction
 
@@ -15,7 +15,13 @@ Rasa NLU example
 Create virtual environment
 
 ```Bash
-python3 -m venv venv
+python3.8 -m venv venv
+```
+
+Activate Environment
+
+```Bash
+source venv/bin/activate
 ```
 
 Install dependencies
@@ -42,4 +48,10 @@ docker build -t rasa .
 
 ```Bash
 docker run -p 5005:5005 rasa
+```
+
+Test Application locally
+
+```Bash
+rasa run --enable-api -m models/20210824-134134.tar.gz  --port 5005
 ```
